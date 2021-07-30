@@ -75,7 +75,7 @@ function Piece({piece, setArtworks, artworks}){
         </div>
         <div>
             <h4>Comments</h4>
-            <ul>{piece.comments.map(item=>{return <li>{item}</li>})}
+            <ul>{comments.map(item=>{return <li>{item}</li>})}
                 
             </ul>
         </div>
