@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+.App{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.homePage{
+ height:500pt;
+
+}
+.artworks{
+  background-color:black;
+}
+.piecePage{
+  /* text-align:center;
+  align-items:center; */
+  float:left;
+  padding-top:0;
+  margin-top:0;
+  width:50%;
+  text-align:center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.piecePage img{
+  width:85%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.pieceInfo{
+  margin-top:20pt;
+  width:20%;
+  float:left;
+  text-align:center;
 }
 
-.App-link {
-  color: #61dafb;
+#form-page{
+  width:50%;
+}
+#artist-index{
+  width:50%;
+  float:left;
+}
+#museum-index{
+  width:50%;
+  float:left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-dark{
+  background-color:black;
 }
+#homeTitle{
+  color:white;
+  font-size:75pt;
+}
+
+#kusama-caption{
+  text-align:right;
+  color:white;
+  font-size:15pt;
+}
+
+
+
+
+
