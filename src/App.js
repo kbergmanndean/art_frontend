@@ -14,6 +14,7 @@ function App() {
   const [artists, setArtists]=useState([])
   const [museums, setMuseums]=useState([])
 
+
     useEffect(()=>{
         async function fetchData(){
         const res=await fetch("http://localhost:3000/artworks")

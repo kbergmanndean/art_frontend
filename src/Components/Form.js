@@ -14,7 +14,7 @@ function Form({artworks,setArtworks, artists,museums}){
     const addNewPiece=pieceAdded=> {const newArray=[...artworks, pieceAdded]
         setArtworks(newArray)
     }
-        async function handleSubmit(e){
+    async function handleSubmit(e){
         e.preventDefault()
         const newPiece={name:name,artist_id:artist_id,year:year,museum_id:museum_id, image_url:imageURL}
         const res=await fetch("http://localhost:3000/artworks",{

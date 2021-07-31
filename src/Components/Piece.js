@@ -4,7 +4,7 @@ import {useState} from "react"
 
 function Piece({piece, setArtworks, artworks}){
     const [comment,setComment]=useState("")
-    const [comments,setComments]=useState([])
+    const [comments,setComments]=useState(piece.comments.map((comment)=>comment.comment))
 
     
     const updateComments=()=>{
@@ -13,14 +13,12 @@ function Piece({piece, setArtworks, artworks}){
     }
 
     async function handleSubmit(e){
-            e.preventDefault();
-            await fetch(`http://localhost:3000/artworks/${piece.id}`,{
-            method:"PATCH",
+        e.preventDefault();
+        await fetch(`http://localhost:3000/comments`,{
+            method:"POST",
             headers:{"Content-Type":"application/json"},
-            body:JSON.stringify({comments:comments})
-        }); 
-            updateComments();
-            console.log(comments)
+            body:JSON.stringify({artwork_id: piece.id, comment:comment})
+        });updateComments();
     }
 
     const history = useHistory();
@@ -63,7 +61,7 @@ function Piece({piece, setArtworks, artworks}){
                 <br/>
                 <form onSubmit={handleSubmit}>
                 <p>Add a Comment:</p>
-                <textarea onChange={(e)=>setComment(e.target.value)} value={comment}></textarea>
+                <textarea onChange={(e)=>setComment(e.target.value)} value={comment} key={comment.id}></textarea>
                 <br/>
                 <button type="submit">Submit</button>
                 </form>
@@ -75,7 +73,8 @@ function Piece({piece, setArtworks, artworks}){
         </div>
         <div>
             <h4>Comments</h4>
-            <ul>{comments.map(item=>{return <li>{item}</li>})}
+            <ul>
+                {comments.map(item=>{return <li key={item.id}>{item}</li>})}
                 
             </ul>
         </div>
