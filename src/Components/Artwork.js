@@ -14,7 +14,7 @@ function Artwork({artwork}){
                     <br/>
                     {artwork.museum.name}
                     <br/>
-                    <a href={`artworks/${artwork.id}`}>View Artwork</a>
+                    <a className="view" href={`artworks/${artwork.id}`}>View Artwork</a>
                 </p>
             </div>
         </div>
