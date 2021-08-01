@@ -9,6 +9,7 @@ import Piece from "./Components/Piece"
 import Artists from "./Components/Artists"
 import ArtistPiece from "./Components/ArtistPiece"
 import Museums from "./Components/Museums"
+import MuseumPiece from "./Components/MuseumPiece"
 
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
             <Route exact path="/artworks" component={()=><Artworks artworks={artworks} setArtworks={setArtworks} artists={artists}/>}/>
             {artworks.map(item=>{return <Route exact path={`/artworks/${item.id}`} component={()=><Piece  key={item.id} piece={item} setArtworks={setArtworks} artworks={artworks}/>}/>})}
             {artists.map(item=>{return <Route exact path={`/artists/${item.id}`} component={()=><ArtistPiece artist={item} artists={artists} artworks={artworks}/>}/>})}
+            {museums.map(item=>{return <Route exact path={`/museums/${item.id}`} component={()=><MuseumPiece museum={item} museums={museums} artworks={artworks}/>}/>})}
           </Switch>
       </Router>
     </div>

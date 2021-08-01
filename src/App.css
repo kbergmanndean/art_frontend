@@ -9,7 +9,7 @@
 
 }
 .artworks{
-  background-color:white;
+  background-color:black;
 }
 .card{
   background-color:black;
@@ -62,28 +62,33 @@
   font-size:15pt;
 }
 
-#artist-list{
+#artist-list, #museum-list{
   text-align:center;
   list-style:none;
   font-size:20pt;
 
 }
 
-#artistPage{
+.artistPage, #museumPage{
   width:20%;
   float:left;
   text-align:center;
+  color:#808080;
 }
 
-#artistPiece img{
+.artistPiece img, #museumPiece img{
   width:85%;
 }
-#artistPiece{
+.artistPiece, #museumPiece{
   float:left;
   width:50%;
   text-align:center;
 }
-.artist{
+#artist-piece-page, #museum-piece-page{
+  color:#808080;
+  background-color:black;
+}
+.artist, .museum{
   color:#707070;
 }
 .sort{
@@ -98,9 +103,23 @@
 .view{
   color:#606060;
 }
-.artists-page{
+.artists-page, .museums-page{
   background-color:black;
   height:550pt;
-  
+}
+.artist-list-page,.museums-list-page{
+padding-top:50pt;
+}
+
+#form, #artist-index, #museum-index{
+  color:#808080;
+  background-color:black;
+}
+.form-submit{
+ background-color:gold;
+}
+
+#dropdownMenuButton{
+  color:#606060;
 }
 

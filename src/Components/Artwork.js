@@ -2,7 +2,7 @@
 
 function Artwork({artwork}){
     return(
-        <div className="card" style={{width: "18rem", margin:"5rem" }}>
+        <div className="card" style={{width: "22rem", margin:"4rem" }}>
             <img className="card-img-top" src={artwork.image_url} alt="artwork"/>
             <div className="card-body">
                 <p className="card-text">

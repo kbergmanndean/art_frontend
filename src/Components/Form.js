@@ -32,9 +32,9 @@ function Form({artworks,setArtworks, artists,museums}){
     }
 
     return(
-        <div>
-        <div id="form-page">
+        <div id="form">
             <Navbar/>
+        <div id="form-page">
             <h1>Add a New Artwork</h1>
         <form onSubmit={handleSubmit} className="form">
             <div className="form-group">
@@ -57,7 +57,7 @@ function Form({artworks,setArtworks, artists,museums}){
                 <label htmlFor="image">Image URL</label>
                 <input type="text" className="form-control" id="image" onChange={(e)=>setImageURL(e.target.value)} value={imageURL}/>
             </div>
-            <button type="submit" className="btn btn-primary">Submit</button>
+            <button type="submit" className="btn form-submit">Submit</button>
         </form>
         </div>
         <div id="artist-index">

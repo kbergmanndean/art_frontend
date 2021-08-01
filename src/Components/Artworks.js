@@ -20,8 +20,8 @@ function Artworks({artworks,artists}){
     }
 
     return(
-        <div>
         <div className="artworks">
+        <div>
             <Navbar/>
             <br/>
             <div id="sortBox">
