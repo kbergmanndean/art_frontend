@@ -5,7 +5,7 @@ import 'bootstrap';
 import {useState} from 'react'
 import 'bootstrap/dist/js/bootstrap.js';
 import $ from 'jquery';
-
+import background from "./pictures/polkadot2.jpeg"
 
 
 function Artworks({artworks,artists}){
@@ -20,8 +20,8 @@ function Artworks({artworks,artists}){
     }
 
     return(
-        <div className="artworks">
-        <div>
+        <div className="artworks" style={{backgroundImage:`url(${background})`}}>
+        
             <Navbar/>
             <br/>
             <div id="sortBox">
@@ -30,7 +30,7 @@ function Artworks({artworks,artists}){
                 <a className="sort" href="#" onClick={sortArtist}>Sort by Artist</a>
             </div>
             
-        </div>
+        
 
         <div className="container ">
             <div className="dropdrown btn-group">
@@ -49,6 +49,7 @@ function Artworks({artworks,artists}){
                         </div>
                 </div>
             </div>
+            
         
         </div>
 

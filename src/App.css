@@ -15,7 +15,7 @@
   background-color:black;
   color:white;
 }
-.piecePage{
+.pieceImage{
   /* text-align:center;
   align-items:center; */
   float:left;
@@ -24,9 +24,17 @@
   width:50%;
   text-align:center;
 }
+.piece-page-whole{
+  width: auto;
+  height: auto;
+  background-color: black;
+  overflow:auto;
+  color:#808080
+}
 
-.piecePage img{
+.pieceImage img{
   width:85%;
+  margin-top:20pt;
 }
 
 .pieceInfo{
@@ -34,6 +42,9 @@
   width:20%;
   float:left;
   text-align:center;
+}
+.comment-section{
+  margin-top:30pt;
 }
 
 #form-page{
@@ -69,36 +80,42 @@
 
 }
 
-.artistPage, #museumPage{
+.artistPage, .museumPage{
   width:20%;
   float:left;
   text-align:center;
   color:#808080;
+  background-color:black;
 }
 
-.artistPiece img, #museumPiece img{
+.artistPiece img, .museumPiece img{
   width:85%;
 }
-.artistPiece, #museumPiece{
+.artistPiece, .museumPiece{
   float:left;
   width:50%;
   text-align:center;
+  color:#808080;
 }
 #artist-piece-page, #museum-piece-page{
-  color:#808080;
-  background-color:black;
+  width: auto;
+  height: auto;
+  background-color: black;
+  overflow:auto;
 }
 .artist, .museum{
   color:#707070;
 }
 .sort{
-  color:#707070;
+  color:black;
+  font-weight:bold;
   text-align:center;
-  font-size:13pt;
+  font-size:20pt;
 }
 
 #sortBox{
   text-align:center;
+  /* background-color:black; */
 }
 .view{
   color:#606060;

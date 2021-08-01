@@ -39,7 +39,7 @@ function Piece({piece, setArtworks, artworks}){
         }
 
     return(
-        <div>
+        <div className="piece-page-whole">
         <Navbar/>
         <div className="pieceInfo">
             
@@ -68,10 +68,10 @@ function Piece({piece, setArtworks, artworks}){
             </div>
             
         </div>
-        <div className="piecePage">
+        <div className="pieceImage">
         <img src={piece.image_url} alt="artwork"/>
         </div>
-        <div>
+        <div className="comment-section">
             <h4>Comments</h4>
             <ul>
                 {comments.map(item=>{return <li key={item.id}>{item}</li>})}
