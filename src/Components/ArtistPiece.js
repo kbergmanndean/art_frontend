@@ -2,7 +2,7 @@ import Navbar from "./Navbar"
 
 function ArtistPiece({artworks,artist}){
 
-const filterArt=artworks.filter(artwork=>artwork.artist.id==artist.id)
+const filterArt=artworks.filter(artwork=>artwork.artist.id===artist.id)
 
     return(
         <div>
@@ -16,7 +16,7 @@ const filterArt=artworks.filter(artwork=>artwork.artist.id==artist.id)
                     {filterArt.map(artwork=>{return(
                         <div>
                              <h4>{artwork.name}</h4>
-                            <img src={artwork.image_url}></img>
+                            <img alt="artwork"src={artwork.image_url}></img>
                         </div>
                     )})}
                  </div>

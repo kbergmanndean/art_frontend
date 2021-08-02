@@ -53,10 +53,12 @@
 #artist-index{
   width:50%;
   float:left;
+  height:250pt;
 }
 #museum-index{
   width:50%;
   float:left;
+  height:250pt;
 }
 
 .btn-dark{
@@ -99,7 +101,7 @@
 }
 #artist-piece-page, #museum-piece-page{
   width: auto;
-  height: auto;
+  height: 550pt;
   background-color: black;
   overflow:auto;
 }
@@ -136,7 +138,15 @@ padding-top:50pt;
  background-color:gold;
 }
 
-#dropdownMenuButton{
-  color:#606060;
+#dropdown-basic{
+  color:white;
+  background-color:black;
 }
 
+#no-result{
+  height:400pt;
+  text-align:center;
+  color:white;
+  width:1090pt;
+  font-size:100pt;
+}

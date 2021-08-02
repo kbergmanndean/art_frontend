@@ -51,7 +51,7 @@ function App() {
             <Route exact path="/" component={()=><Home/>}/>
             <Route exact path="/artists" component={()=><Artists artists={artists} setArtists={setArtists}/>}/>
             <Route exact path="/museums" component={()=><Museums museums={museums} setMuseums={setMuseums}/>}/>
-            <Route exact path="/artworks" component={()=><Artworks artworks={artworks} setArtworks={setArtworks} artists={artists}/>}/>
+            <Route exact path="/artworks" component={()=><Artworks artworks={artworks} setArtworks={setArtworks} artists={artists} museums={museums}/>}/>
             {artworks.map(item=>{return <Route exact path={`/artworks/${item.id}`} component={()=><Piece  key={item.id} piece={item} setArtworks={setArtworks} artworks={artworks}/>}/>})}
             {artists.map(item=>{return <Route exact path={`/artists/${item.id}`} component={()=><ArtistPiece artist={item} artists={artists} artworks={artworks}/>}/>})}
             {museums.map(item=>{return <Route exact path={`/museums/${item.id}`} component={()=><MuseumPiece museum={item} museums={museums} artworks={artworks}/>}/>})}
