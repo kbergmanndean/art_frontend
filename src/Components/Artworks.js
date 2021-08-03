@@ -47,14 +47,20 @@ function Artworks({artworks,artists,museums}){
     // }
 
     return(
-        <div className="artworks" style={{backgroundImage:`url(${background})`}}>
+        <div className="artworks" 
+        // style={{backgroundImage:`url(${background})`}}
+        >
         
             <Navbar/>
             <br/>
             <div className="sort-filter">
+            <div id="sortBox">
+                <a className="btn btn-dark sort" href="#" role="button" onClick={sortName}>Sort by Name</a>
+                <a className="btn btn-dark sort" href="#" role="button" onClick={sortArtist}>Sort by Artist</a>
+            </div>
                 <div className="dropdown">
             <Dropdown>
-                <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+                <Dropdown.Toggle variant="secondary" className="dropdown-basic">
                     Filter by Artist
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
@@ -63,7 +69,7 @@ function Artworks({artworks,artists,museums}){
                 </Dropdown.Menu>
             </Dropdown>
             <Dropdown>
-                <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+                <Dropdown.Toggle variant="secondary" className="dropdown-basic">
                     Filter by Museum
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
@@ -72,15 +78,10 @@ function Artworks({artworks,artists,museums}){
                 </Dropdown.Menu>
             </Dropdown>
             </div>
-            <div id="sortBox">
-                <a className="sort" href="#" onClick={sortName}>Sort by Name</a>
-                <br/>
-                <a className="sort" href="#" onClick={sortArtist}>Sort by Artist</a>
-            </div>
             </div>
             <div className="card-holder row row-cols-1 row-cols-md-3">
                 {artworkGrid.length!==0 ? artworkGrid: <div id="no-result" style={{backgroundImage:`url(${background})`}}><h1>No Result</h1></div>}
-                     {console.log(artworkGrid)}
+                    
             </div>
         </div>
         
