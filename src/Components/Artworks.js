@@ -51,11 +51,8 @@ function Artworks({artworks,artists,museums}){
         
             <Navbar/>
             <br/>
-            <div id="sortBox">
-                <a className="sort" href="#" onClick={sortName}>Sort by Name</a>
-                <br/>
-                <a className="sort" href="#" onClick={sortArtist}>Sort by Artist</a>
-            </div>
+            <div className="sort-filter">
+                <div className="dropdown">
             <Dropdown>
                 <Dropdown.Toggle variant="secondary" id="dropdown-basic">
                     Filter by Artist
@@ -74,6 +71,13 @@ function Artworks({artworks,artists,museums}){
                     {museums.map(museumItem=>{return(<Dropdown.Item value={museumItem.name} onClick={()=>setMuseum(museumItem.name)}>{museumItem.name}</Dropdown.Item>)})}
                 </Dropdown.Menu>
             </Dropdown>
+            </div>
+            <div id="sortBox">
+                <a className="sort" href="#" onClick={sortName}>Sort by Name</a>
+                <br/>
+                <a className="sort" href="#" onClick={sortArtist}>Sort by Artist</a>
+            </div>
+            </div>
             <div className="card-holder row row-cols-1 row-cols-md-3">
                 {artworkGrid.length!==0 ? artworkGrid: <div id="no-result" style={{backgroundImage:`url(${background})`}}><h1>No Result</h1></div>}
                      {console.log(artworkGrid)}

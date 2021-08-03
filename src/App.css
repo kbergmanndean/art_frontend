@@ -130,10 +130,18 @@
 padding-top:50pt;
 }
 
-#form, #artist-index, #museum-index{
+#form{
   color:#808080;
   background-color:black;
+  height:550pt;
 }
+#form-page{
+  display:inline-block;
+  text-align:center;
+  margin-left:275pt;
+  padding:20pt;
+}
+
 .form-submit{
  background-color:gold;
 }
@@ -149,4 +157,14 @@ padding-top:50pt;
   color:white;
   width:1090pt;
   font-size:100pt;
+}
+
+.dropdown{
+  display:inline-block;
+}
+.sort-filter{
+  height:80pt;
+}
+.card img{
+  padding-top:10pt;
 }
