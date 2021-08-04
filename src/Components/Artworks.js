@@ -17,7 +17,7 @@ function Artworks({artworks,artists,museums}){
     function sortArtist(){
         artworks.sort((a, b) => (a.artist.name > b.artist.name) ? 1 : -1)
     }
-
+     
     const filterArtists=artworks.filter(item=>item.artist.name===artist)
     const filterMuseum=artworks.filter(item=>item.museum.name===museum)
     const filterBoth=filterArtists.filter(item=>item.museum.name===museum)
@@ -36,21 +36,9 @@ function Artworks({artworks,artists,museums}){
         artworkGrid=filterBoth.map((artwork)=><Artwork key={artwork.id} artwork={artwork}/>)
     }
 
-    // if (artist!=='All') {
-    //     artworkGrid=filterArtists.map((artwork)=><Artwork key={artwork.id} artwork={artwork}/>)
-    // }
-    // else if (museum!=='All'){
-    //     artworkGrid=filterMuseum.map((artwork)=><Artwork key={artwork.id} artwork={artwork}/>)
-    // }
-    // else{
-    //     artworkGrid=artworks.map((artwork)=><Artwork key={artwork.id} artwork={artwork}/>)
-    // }
 
     return(
-        <div className="artworks" 
-        // style={{backgroundImage:`url(${background})`}}
-        >
-        
+        <div className="artworks">
             <Navbar/>
             <br/>
             <div className="sort-filter">

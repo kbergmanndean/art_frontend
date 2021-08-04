@@ -26,6 +26,20 @@
   color: #FBFCD4;
   font-size: 18pt;
   padding-left: 10pt;
+  padding-bottom: 3pt;
+}
+
+.home .home-caption {
+  background-color: #151515;
+  margin-left: 685pt;
+  padding-right: 10pt;
+  border-radius: 5pt;
+}
+
+.home #kusama-caption {
+  text-align: right;
+  color: #FBFCD4;
+  font-size: 13pt;
 }
 
 .home .buttons {
@@ -35,16 +49,15 @@
   margin-right: 800pt;
 }
 
+.home .buttons a:hover {
+  color: #FFDD03;
+}
+
 .home .buttons .btn {
   margin-top: 20pt;
   background-color: #0A0A0A;
   color: #FBFCD4;
-}
-
-.home #kusama-caption {
-  text-align: right;
-  color: white;
-  font-size: 15pt;
+  border-radius: 5pt;
 }
 
 #navyellow {
@@ -53,7 +66,7 @@
 }
 
 .artworks {
-  background-color: #FBFCD4;
+  background-color: #151515;
 }
 
 .artworks .sort-filter {
@@ -62,13 +75,14 @@
 }
 
 .artworks .sort-filter a, .artworks .sort-filter .dropdown-basic {
-  background-color: #151515;
-  color: #FBFCD4;
+  background-color: #FBC403;
+  color: #151515;
   margin: 10pt;
+  border-radius: 3pt;
 }
 
 .artworks .sort-filter a:hover {
-  color: #FFDD03;
+  color: #808080;
 }
 
 .artworks .sort-filter .dropdown {
@@ -76,31 +90,55 @@
 }
 
 .card {
-  background-color: #151515;
-  color: #FBFCD4;
+  background-color: #FBC403;
+  color: #151515;
+  border-radius: 5pt;
+}
+
+.card h4 {
+  font-size: 20pt;
+  padding-bottom: 10pt;
+}
+
+.card h5 {
+  font-size: 15pt;
+  font-weight: bold;
 }
 
 .card a:hover {
-  color: #FFDD03;
+  color: #808080;
 }
 
 .card img {
   padding-top: 10pt;
 }
 
+.card .view {
+  color: #151515;
+}
+
 .piece-page-whole {
   width: auto;
   height: 570pt;
-  background-color: #FBFCD4;
+  background-color: #151515;
   overflow: auto;
-  color: #151515;
+  color: #FBFCD4;
+}
+
+.piece-page-whole .pieceInfo {
+  padding-left: 10pt;
+}
+
+.piece-page-whole .pieceInfo h5 {
+  font-weight: bold;
 }
 
 .piece-page-whole .pieceImage {
   float: left;
   padding-top: 0;
   margin-top: 0;
-  width: 50%;
+  padding-bottom: 15pt;
+  width: 60%;
   text-align: center;
 }
 
@@ -110,8 +148,9 @@
 }
 
 .piece-page-whole button {
-  background-color: #151515;
-  color: #FBFCD4;
+  background-color: #FBC403;
+  color: #151515;
+  border-radius: 5pt;
 }
 
 .piece-page-whole button:hover {
@@ -132,24 +171,36 @@
 .artists-page, .museums-page {
   background-color: #FFDD03;
   height: 550pt;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .artist-list-page, .museums-list-page {
   padding-top: 50pt;
+  background-color: #151515;
+  width: 50%;
+  margin-left: 270pt;
+  margin-top: 25pt;
+  padding-bottom: 30pt;
+  border-radius: 10pt;
+  -webkit-box-shadow: 15px 15px #FBC403;
+          box-shadow: 15px 15px #FBC403;
 }
 
 #artist-list, #museum-list {
   text-align: center;
   list-style: none;
   font-size: 20pt;
+  font-weight: bold;
 }
 
 #artist-list a:hover, #museum-list a:hover {
-  color: #606060;
+  color: #FBC403;
 }
 
 .artist, .museum {
-  color: #151515;
+  color: #FBFCD4;
 }
 
 .artistPage, .museumPage {
@@ -188,7 +239,7 @@
 }
 
 #form {
-  color: #151515;
+  color: #FBFCD4;
   background-color: #FFDD03;
   height: 550pt;
 }
@@ -201,28 +252,26 @@
   padding-right: 20pt;
   padding-bottom: 20pt;
   width: 50%;
-  background-color: #FBFCD4;
+  background-color: #151515;
   margin-top: 25pt;
   border-radius: 10pt;
+  -webkit-box-shadow: 15px 15px #FBC403;
+          box-shadow: 15px 15px #FBC403;
 }
 
 #form #form-page .form-submit {
-  background-color: #151515;
-  color: #FBFCD4;
+  background-color: #FBC403;
+  color: #151515;
 }
 
 #form #form-page button:hover {
   color: #FFDD03;
 }
 
-.view {
-  color: #FBFCD4;
-}
-
 #no-result {
   height: 400pt;
   text-align: center;
-  color: #151515;
+  color: #FBFCD4;
   width: 1090pt;
   font-size: 100pt;
   padding-top: 70pt;

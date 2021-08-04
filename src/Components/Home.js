@@ -23,7 +23,7 @@ function Home (){
     <br/>
     <a className="btn btn-dark" href="/museums" role="button">View Museums</a>
     </div>
-    <div>
+    <div className="home-caption">
         <p id="kusama-caption">Yayoi Kusama,"The Spirit of the Pumpkins Descended into the Heavens."</p>
     </div>
     </div>

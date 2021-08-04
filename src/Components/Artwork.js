@@ -5,11 +5,9 @@ function Artwork({artwork}){
         <div className="card" style={{width: "22rem", margin:"4rem" }}>
             <img className="card-img-top" src={artwork.image_url} alt="artwork"/>
             <div className="card-body">
+            <h4>{artwork.name}</h4>
+            <h5>{artwork.artist.name}</h5>
                 <p className="card-text">
-                    {artwork.name}
-                    <br/>
-                    {artwork.artist.name}
-                    <br/>
                     {artwork.year}
                     <br/>
                     {artwork.museum.name}

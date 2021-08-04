@@ -44,10 +44,9 @@ function Piece({piece, setArtworks, artworks}){
         <div className="pieceInfo">
             
             <h4>{piece.name}</h4>
+            <h5>{piece.artist.name}</h5>
             <div>
                 {piece.year}
-                <br/>
-                {piece.artist.name}
                 <br/>
                 {piece.artist.dates}
                 <br/>
