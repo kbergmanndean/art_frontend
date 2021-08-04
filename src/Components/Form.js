@@ -1,13 +1,17 @@
 import {useState} from 'react'
 import Navbar from "./Navbar"
 import {useHistory} from "react-router-dom"
+import ArtistForm from "./ArtistForm"
+import MuseumForm from "./MuseumForm"
 
-function Form({artworks,setArtworks, artists,museums}){
+function Form({artworks,setArtworks, artists ,museums, setMuseums, setArtists}){
     const [name, setName]=useState("")
     const [artist, setArtist]=useState(0)
     const [year,setYear]=useState(0)
     const [imageURL, setImageURL]=useState("")
     const [museum, setMuseum]=useState(0)
+    const [showArtist, setShowArtist]=useState(false)
+    const [showMuseum,setShowMuseum]=useState(false)
 
     const history = useHistory();
 
@@ -28,6 +32,12 @@ function Form({artworks,setArtworks, artists,museums}){
         let path = `/artworks`; 
         history.push(path);}
         routeChange();
+    }
+    function toggleArtist(){
+        setShowArtist(!showArtist)
+    }
+    function toggleMuseum(){
+        setShowMuseum(!showMuseum)
     }
 
     return(
@@ -66,6 +76,13 @@ function Form({artworks,setArtworks, artists,museums}){
         </form>
         <br/>
         <h2>Don't see your Museum or Artist?</h2>
+        <br/>
+        <button onClick={toggleArtist}className="btn">{showArtist ? "Hide Form" : "Add Artist"}</button>
+        <button onClick={toggleMuseum}className="btn">{showMuseum ? "Hide Form" : "Add Museum"}</button>
+        <br/>
+        <br/>
+        {showArtist?<div><ArtistForm artists={artists} setArtists={setArtists}/></div>:null}
+        {showMuseum?<div><MuseumForm museums={museums} setMuseums={setMuseums}/></div>:null}
         </div>
         </div>
     )

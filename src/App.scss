@@ -215,7 +215,6 @@ box-shadow:15px 15px $orange;
 #form{
   color:$light;
   background-color:$yellow;
-  height:550pt;
   #form-page{
     display:inline-block;
     text-align:center;
@@ -223,6 +222,7 @@ box-shadow:15px 15px $orange;
     padding-left:20pt;
     padding-right:20pt;
     padding-bottom: 20pt;
+    margin-bottom:20pt;
     width:50%;
     background-color:$lightblack;
     margin-top:25pt;
@@ -234,6 +234,11 @@ box-shadow:15px 15px $orange;
      }
      button:hover{
        color:$yellow;
+     }
+     .btn{
+       background-color:$orange;
+       color:$lightblack;
+       margin-left:20pt;
      }
   }
 }

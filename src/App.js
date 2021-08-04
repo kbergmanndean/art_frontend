@@ -47,7 +47,7 @@ function App() {
     <div className="App">
       <Router>
           <Switch>
-            <Route exact path="/form" component={()=><Form artworks={artworks} setArtworks={setArtworks} artists={artists} museums={museums}/>}/>
+            <Route exact path="/form" component={()=><Form artworks={artworks} setArtworks={setArtworks} artists={artists} setArtists={setArtists} museums={museums} setMuseums={setMuseums}/>}/>
             <Route exact path="/" component={()=><Home/>}/>
             <Route exact path="/artists" component={()=><Artists artists={artists} setArtists={setArtists}/>}/>
             <Route exact path="/museums" component={()=><Museums museums={museums} setMuseums={setMuseums}/>}/>
