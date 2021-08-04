@@ -80,7 +80,7 @@ function Artworks({artworks,artists,museums}){
             </div>
             </div>
             <div className="card-holder row row-cols-1 row-cols-md-3">
-                {artworkGrid.length!==0 ? artworkGrid: <div id="no-result" style={{backgroundImage:`url(${background})`}}><h1>No Result</h1></div>}
+                {artworkGrid.length!==0 ? artworkGrid: <div id="no-result"><h1>No Result</h1></div>}
                     
             </div>
         </div>

@@ -56,14 +56,14 @@ function Piece({piece, setArtworks, artworks}){
                 {piece.museum.location}
                 <br/>
                 <br/>
-                <button onClick={()=>handleDelete(piece.id)}>Remove Artwork</button>
+                <button className="btn btn-dark" onClick={()=>handleDelete(piece.id)}>Remove Artwork</button>
                 <br/>
                 <br/>
                 <form onSubmit={handleSubmit}>
                 <p>Add a Comment:</p>
                 <textarea onChange={(e)=>setComment(e.target.value)} value={comment} key={comment.id}></textarea>
                 <br/>
-                <button type="submit">Submit</button>
+                <button className="btn btn-dark" type="submit">Submit</button>
                 </form>
             </div>
             

@@ -4,9 +4,12 @@ import background from "./pictures/kusama.jpg"
 
 function Home (){
     return(
-    <div className="homePage" style={{backgroundImage:`url(${background})`}}> 
+    <div className="home" style={{backgroundImage:`url(${background})`}}> 
     <div>
-        <h1 id="homeTitle">Welcome</h1>
+        <h1 id="home-title">Welcome</h1>
+        <div className="home-subtitle-container">
+        <h3 id="home-subtitle">to an interactive museum of art by women</h3>
+        </div>
     </div>
     <div className="buttons">
     <a className="btn btn-dark" href="/artworks" role="button">View Artworks</a>

@@ -6,166 +6,206 @@ $orange:#FBC403;
 
 .App {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-#homeTitle{
-  padding:30pt;
-  color:white;
-  font-size:75pt;
-}
-.buttons{
-  margin-left:100pt;
-  margin-top:30pt;
-  text-align:center;
-  margin-right:800pt;
-  .btn{
-    margin-top:20pt;
-    background-color:$blackshade;
-    color:$light;
-  }
-}
-#kusama-caption{
-  text-align:right;
-  color:white;
-  font-size:15pt;
   
 }
-.homePage{
- height:550pt;
-}
-#navyellow{
-  background-color:$orange;
-}
-.artworks{
-  background-color:$light;
+.home{
+  height:550pt;
+ 
+  #home-title{
+    padding-top:30pt;
+    padding-left:30pt;
+    color:white;
+    font-size:75pt;
+  }
+  .home-subtitle-container{
+    background-color:$lightblack;
+    width:330pt;
+    margin-left:60pt;
+    padding-left:0pt;
+    padding-right:0pt;
+    border-radius:3pt;
+    #home-subtitle{
+      color:$light;
+      font-size:18pt;
+      padding-left:10pt;
+  
+    }
+
+  }
+  
+  .buttons{
+    margin-left:100pt;
+    margin-top:30pt;
+    text-align:center;
+    margin-right:800pt;
+    .btn{
+      margin-top:20pt;
+      background-color:$blackshade;
+      color:$light;
+    }
+  }
+  #kusama-caption{
+    text-align:right;
+    color:white;
+    font-size:15pt;
+  }
 }
 
-.sort-filter{
-  text-align:center;
-  a, .dropdown-basic{
-    background-color:$lightblack;
-    color:$yellow;
-    margin:10pt;
+#navyellow{
+  background-color:$orange;
+  color:$blackshade;
+}
+
+.artworks{
+  background-color:$light;
+  .sort-filter{
+    text-align:center;
+    height:80pt;
+    a, .dropdown-basic{
+      background-color:$lightblack;
+      color:$light;
+      margin:10pt;
+    }
+    a:hover{
+      color:$yellow;
+   }
+   .dropdown{
+    display:inline-block;
+  }
   }
 }
 .card{
   background-color:$lightblack;
   color:$light;
+  a:hover{
+    color:$yellow;
+    
+  }
+  img{
+    padding-top:10pt;
+  }
 }
-.pieceImage{
-  float:left;
-  padding-top:0;
-  margin-top:0;
-  width:50%;
-  text-align:center;
-}
+
 .piece-page-whole{
   width: auto;
-  height: 550pt;
-  background-color:$lightblack;
+  height: 570pt;
+  background-color:$light;
   overflow:auto;
-  color:$light;
+  color:$lightblack;
+  .pieceImage{
+    float:left;
+    padding-top:0;
+    margin-top:0;
+    width:50%;
+    text-align:center;
+    img{
+      width:85%;
+    margin-top:20pt;
+    }
+  }
+  button{
+    background-color:$lightblack;
+    color:$light;
+  }
+  button:hover{
+    color:$yellow;
+  }
+  .pieceInfo{
+    margin-top:20pt;
+    width:20%;
+    float:left;
+    text-align:center;
+  }
+  .comment-section{
+    margin-top:30pt;
+  }
 }
-
-.pieceImage img{
-  width:85%;
-  margin-top:20pt;
+.artists-page, .museums-page{
+  background-color:$yellow;
+  height:550pt;
+  
 }
-
-.pieceInfo{
-  margin-top:20pt;
-  width:20%;
-  float:left;
-  text-align:center;
+.artist-list-page,.museums-list-page{
+padding-top:50pt;
 }
-.comment-section{
-  margin-top:30pt;
-}
-
-#form-page{
-  width:50%;
-}
-// .btn-dark{
-//   background-color:$blackshade;
-// }
 #artist-list, #museum-list{
   text-align:center;
   list-style:none;
   font-size:20pt;
-
+  a:hover{
+    color:#606060;
+  }
+}
+.artist,.museum{
+  color:$lightblack;
 }
 
 .artistPage, .museumPage{
   width:20%;
   float:left;
   text-align:center;
-  color:#808080;
-  background-color:black;
-}
-
-.artistPiece img, .museumPiece img{
-  width:85%;
+  background-color:$lightblack;
+  h1{
+    padding-top:20pt;
+  }
+  
 }
 .artistPiece, .museumPiece{
   float:left;
   width:50%;
   text-align:center;
-  color:#808080;
+  color:$light;
+  img{
+    width:85%;
+    padding:20pt;
+  }
+  h4{
+    padding-top:20pt;
+  }
 }
 #artist-piece-page, #museum-piece-page{
   width: auto;
   height: 550pt;
-  background-color: black;
+  background-color:$lightblack;
   overflow:auto;
+  color:$light;
 }
-.artist, .museum{
-  color:#707070;
+
+#form{
+  color:$lightblack;
+  background-color:$yellow;
+  height:550pt;
+  #form-page{
+    display:inline-block;
+    text-align:center;
+    margin-left:275pt;
+    padding-left:20pt;
+    padding-right:20pt;
+    padding-bottom: 20pt;
+    width:50%;
+    background-color:$light;
+    margin-top:25pt;
+    border-radius:10pt;
+    .form-submit{
+      background-color:$lightblack;
+      color:$light;
+     }
+     button:hover{
+       color:$yellow;
+     }
+  }
 }
 .view{
   color:$light;
 }
-.artists-page, .museums-page{
-  background-color:black;
-  height:550pt;
-}
-.artist-list-page,.museums-list-page{
-padding-top:50pt;
-}
-
-#form{
-  color:#808080;
-  background-color:black;
-  height:550pt;
-}
-#form-page{
-  display:inline-block;
-  text-align:center;
-  margin-left:275pt;
-  padding:20pt;
-}
-
-.form-submit{
- background-color:gold;
-}
-
-#dropdown-basic{
-  color:white;
-  background-color:black;
-}
-
 #no-result{
   height:400pt;
   text-align:center;
-  color:white;
+  color:$lightblack;
   width:1090pt;
   font-size:100pt;
+  padding-top:70pt;
 }
 
-.dropdown{
-  display:inline-block;
-}
-.sort-filter{
-  height:80pt;
-}
-.card img{
-  padding-top:10pt;
-}
+
+

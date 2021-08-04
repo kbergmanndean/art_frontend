@@ -16,6 +16,7 @@ const filterArt=artworks.filter(artwork=>artwork.artist.id===artist.id)
                     {filterArt.map(artwork=>{return(
                         <div>
                              <h4>{artwork.name}</h4>
+                             <h5>{artwork.year}</h5>
                             <img alt="artwork"src={artwork.image_url}></img>
                         </div>
                     )})}
