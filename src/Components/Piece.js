@@ -4,22 +4,22 @@ import {useState} from "react"
 
 function Piece({piece, setArtworks, artworks}){
     const [comment,setComment]=useState("")
-    const [comments,setComments]=useState(piece.comments.map((comment)=>comment.comment))
+    // const [comments,setComments]=useState(piece.comments.map((comment)=>comment.comment))
+    const [comments,setComments]=useState(piece.comments)
 
-    
-    const updateComments=()=>{
+    async function handleSubmit(e){
+        // e.preventDefault();
+        const res= await fetch(`http://localhost:3000/comments`,{
+            method:"POST",
+            headers:{"Content-Type":"application/json"},
+            body:JSON.stringify({artwork_id: piece.id, comment:comment})
+        });updateComments(res);
+    }
+    const updateComments=(comment)=>{
         const updatedComments=[...comments,comment]
         setComments(updatedComments)
     }
 
-    async function handleSubmit(e){
-        e.preventDefault();
-        await fetch(`http://localhost:3000/comments`,{
-            method:"POST",
-            headers:{"Content-Type":"application/json"},
-            body:JSON.stringify({artwork_id: piece.id, comment:comment})
-        });updateComments();
-    }
 
     const history = useHistory();
     const routeChange = () =>{ 
@@ -36,7 +36,17 @@ function Piece({piece, setArtworks, artworks}){
             setArtworks(filteredArt)
             routeChange();
             })
-        }
+    }
+
+    async function handleComment(id){
+        await fetch(`http://localhost:3000/comments/${id}`,{
+            method:"DELETE",
+        })
+            .then(()=>{
+            const filteredComments=comments.filter(comment=>comment.id!==id)
+            setComments(filteredComments)
+            })
+    }
 
     return(
         <div className="piece-page-whole">
@@ -73,8 +83,10 @@ function Piece({piece, setArtworks, artworks}){
         <div className="comment-section">
             <h4>Comments</h4>
             <ul>
-                {comments.map(item=>{return <li key={item.id}>{item}</li>})}
-                
+                 {comments.map((item)=>{return <button key={item.id} onClick={()=>handleComment(item.id)} className="btn x">
+                    {item.comment}
+                    </button>
+                    })}
             </ul>
         </div>
         </div>

@@ -153,6 +153,12 @@
   border-radius: 5pt;
 }
 
+.piece-page-whole .x {
+  padding: 0pt 2pt;
+  font-size: 12pt;
+  margin-left: 5pt;
+}
+
 .piece-page-whole button:hover {
   color: #FFDD03;
 }

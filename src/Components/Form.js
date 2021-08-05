@@ -75,7 +75,7 @@ function Form({artworks,setArtworks, artists ,museums, setMuseums, setArtists}){
             <button type="submit" className="btn form-submit">Submit</button>
         </form>
         <br/>
-        <h2>Don't see your Museum or Artist?</h2>
+        <h3>Don't see your Museum or Artist?</h3>
         <br/>
         <button onClick={toggleArtist}className="btn">{showArtist ? "Hide Form" : "Add Artist"}</button>
         <button onClick={toggleMuseum}className="btn">{showMuseum ? "Hide Form" : "Add Museum"}</button>
