@@ -4,7 +4,6 @@ import {useState} from "react"
 
 function Piece({piece, setArtworks, artworks}){
     const [comment,setComment]=useState("")
-    // const [comments,setComments]=useState(piece.comments.map((comment)=>comment.comment))
     const [comments,setComments]=useState(piece.comments)
 
     async function handleSubmit(e){
