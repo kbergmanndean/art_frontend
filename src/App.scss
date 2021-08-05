@@ -177,7 +177,6 @@ box-shadow:15px 15px $orange;
   text-align:center;
   list-style:none;
   font-size:20pt;
-  font-weight:bold;
   a:hover{
     color:$orange;
   }
@@ -256,6 +255,30 @@ box-shadow:15px 15px $orange;
   font-size:100pt;
   padding-top:70pt;
 }
+.circle{
+  border-radius:50%;
+  background-color:$lightblack;
+  float:right;
+  color:$lightblack;
+  margin-top:100pt;
+  margin-right:90pt;
+  width:60pt;
+  height:60pt;
+  box-shadow:8px 8px $orange;
 
-
+}
+.circle-2{
+  @extend .circle;
+  margin-top:270pt;
+  margin-right:10pt;
+  width:40pt;
+  height:40pt;
+}
+.circle-3{
+  @extend .circle;
+  margin-right: -160pt;
+  margin-top: 370pt;
+  width:80pt;
+  height:80pt;
+}
 
