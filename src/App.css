@@ -40,6 +40,7 @@
   text-align: right;
   color: #FBFCD4;
   font-size: 13pt;
+  margin-top: 50pt;
 }
 
 .home .buttons {
@@ -58,6 +59,7 @@
   background-color: #0A0A0A;
   color: #FBFCD4;
   border-radius: 5pt;
+  font-size: 15pt;
 }
 
 #navyellow {
@@ -176,7 +178,7 @@
 
 .artists-page, .museums-page {
   background-color: #FFDD03;
-  height: 550pt;
+  height: 600pt;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -313,5 +315,12 @@
   margin-top: 370pt;
   width: 80pt;
   height: 80pt;
+}
+
+.header {
+  text-align: center;
+  color: #FFDD03;
+  font-size: 45pt;
+  margin-left: 30pt;
 }
 /*# sourceMappingURL=App.css.map */

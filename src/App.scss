@@ -6,7 +6,6 @@ $orange:#FBC403;
 
 .App {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  
 }
 .home{
   height:550pt;
@@ -41,6 +40,7 @@ $orange:#FBC403;
     text-align:right;
     color:$light;
     font-size:13pt;
+    margin-top:50pt;
   }
   .buttons{
     margin-left:100pt;
@@ -55,6 +55,7 @@ $orange:#FBC403;
       background-color:$blackshade;
       color:$light;
       border-radius:5pt;
+      font-size:15pt;
     }
   }
 }
@@ -158,7 +159,8 @@ $orange:#FBC403;
 }
 .artists-page, .museums-page{
   background-color:$yellow;
-  height:550pt;
+  height:600pt;
+  
   align-items:center;
   
 }
@@ -282,3 +284,9 @@ box-shadow:15px 15px $orange;
   height:80pt;
 }
 
+.header{
+  text-align:center;
+  color:$yellow;
+  font-size:45pt;
+  margin-left:30pt;
+}
