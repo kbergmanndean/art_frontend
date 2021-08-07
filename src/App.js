@@ -45,7 +45,7 @@ function App() {
 
   return(
     <div className="App">
-      <Router basename="/art_frontend/">
+      <Router basename="/art_frontend/#">
           <Switch>
             <Route exact path="/art_frontend/#/form" component={()=><Form artworks={artworks} setArtworks={setArtworks} artists={artists} setArtists={setArtists} museums={museums} setMuseums={setMuseums}/>}/>
             <Route exact path="/art_frontend/#/" component={()=><Home/>}/>
