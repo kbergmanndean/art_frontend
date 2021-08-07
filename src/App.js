@@ -1,6 +1,6 @@
 
 import './App.css';
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {HashRouter as Router, Switch, Route} from "react-router-dom";
 import Form from "./Components/Form";
 import Home from "./Components/Home";
 import Artworks from "./Components/Artworks";
@@ -45,7 +45,7 @@ function App() {
 
   return(
     <div className="App">
-      <Router basename="/art_frontend">
+      <Router basename={process.env.PUBLIC_URL}>
           <Switch>
             <Route exact path="/form" component={()=><Form artworks={artworks} setArtworks={setArtworks} artists={artists} setArtists={setArtists} museums={museums} setMuseums={setMuseums}/>}/>
             <Route exact path="/" component={()=><Home/>}/>
