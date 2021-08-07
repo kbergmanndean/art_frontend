@@ -10,7 +10,7 @@ function ArtistForm({artists, setArtists}){
     async function handleSubmit(e){
         // e.preventDefault()
         const newArtist={name:name,dates:dates}
-        const res=await fetch("http://localhost:3000/artists",{
+        const res=await fetch("https://cryptic-chamber-54953.herokuapp.com/artists",{
             headers:{"Content-Type":"application/json"},
             method:"POST",
             body:JSON.stringify(newArtist)

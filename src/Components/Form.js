@@ -21,7 +21,7 @@ function Form({artworks,setArtworks, artists ,museums, setMuseums, setArtists}){
     async function handleSubmit(e){
         e.preventDefault()
         const newPiece={name:name,artist_id:artist,year:year, museum_id:museum, image_url:imageURL}
-        const res=await fetch("http://localhost:3000/artworks",{
+        const res=await fetch("https://cryptic-chamber-54953.herokuapp.com/artworks",{
             headers:{"Content-Type":"application/json"},
             method:"POST",
             body:JSON.stringify(newPiece)

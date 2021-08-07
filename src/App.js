@@ -20,7 +20,7 @@ function App() {
 
     useEffect(()=>{
         async function fetchData(){
-        const res=await fetch("http://localhost:3000/artworks")
+        const res=await fetch("https://cryptic-chamber-54953.herokuapp.com/artworks")
         const artworkData=await res.json()
         setArtworks(artworkData)
     }fetchData()
@@ -28,7 +28,7 @@ function App() {
 
     useEffect(()=>{
       async function fetchData(){
-      const res=await fetch("http://localhost:3000/artists")
+      const res=await fetch("https://cryptic-chamber-54953.herokuapp.com/artists")
       const artistData=await res.json()
       setArtists(artistData)
   }fetchData()
@@ -36,7 +36,7 @@ function App() {
 
     useEffect(()=>{
       async function fetchData(){
-      const res=await fetch("http://localhost:3000/museums")
+      const res=await fetch("https://cryptic-chamber-54953.herokuapp.com/museums")
       const museumData=await res.json()
       setMuseums(museumData)
   }fetchData()

@@ -8,7 +8,7 @@ function Piece({piece, setArtworks, artworks}){
 
     async function handleSubmit(e){
         // e.preventDefault();
-        const res= await fetch(`http://localhost:3000/comments`,{
+        const res= await fetch(`https://cryptic-chamber-54953.herokuapp.com/comments`,{
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify({artwork_id: piece.id, comment:comment})
@@ -27,7 +27,7 @@ function Piece({piece, setArtworks, artworks}){
     }
 
     async function handleDelete(id){
-        await fetch(`http://localhost:3000/artworks/${id}`,{
+        await fetch(`https://cryptic-chamber-54953.herokuapp.com/artworks/${id}`,{
             method:"DELETE",
         })
             .then(()=>{
@@ -38,7 +38,7 @@ function Piece({piece, setArtworks, artworks}){
     }
 
     async function handleComment(id){
-        await fetch(`http://localhost:3000/comments/${id}`,{
+        await fetch(`https://cryptic-chamber-54953.herokuapp.com/comments/${id}`,{
             method:"DELETE",
         })
             .then(()=>{

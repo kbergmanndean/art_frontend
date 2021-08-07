@@ -10,7 +10,7 @@ function MuseumForm({museums,setMuseums}){
     async function handleSubmit(e){
         // e.preventDefault()
         const newMuseum={name:name,location:location}
-        const res=await fetch("http://localhost:3000/museums",{
+        const res=await fetch("https://cryptic-chamber-54953.herokuapp.com/museums",{
             headers:{"Content-Type":"application/json"},
             method:"POST",
             body:JSON.stringify(newMuseum)
