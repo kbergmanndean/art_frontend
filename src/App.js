@@ -48,7 +48,7 @@ function App() {
       <Router basename={process.env.PUBLIC_URL}>
           <Switch>
             <Route exact path="art_frontend/#/form" component={()=><Form artworks={artworks} setArtworks={setArtworks} artists={artists} setArtists={setArtists} museums={museums} setMuseums={setMuseums}/>}/>
-            <Route exact path="/art_frontend/#/" component={()=><Home/>}/>
+            <Route exact path="art_frontend/#/" component={()=><Home/>}/>
             <Route exact path="art_frontend/#/artists" component={()=><Artists artists={artists} setArtists={setArtists}/>}/>
             <Route exact path="art_frontend/#/museums" component={()=><Museums museums={museums} setMuseums={setMuseums}/>}/>
             <Route exact path="art_frontend/#/artworks" component={()=><Artworks artworks={artworks} setArtworks={setArtworks} artists={artists} museums={museums}/>}/>
