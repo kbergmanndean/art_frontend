@@ -11,16 +11,16 @@ function Navbar (){
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/artworks">Artworks</a>
+          <a className="nav-link active" aria-current="page" href="/art_frontend/#/artworks">Artworks</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/artists">Artists</a>
+          <a className="nav-link" href="/art_frontend/#/artists">Artists</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/museums">Museums</a>
+          <a className="nav-link" href="/art_frontend/#/museums">Museums</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/form" tabIndex="-1" aria-disabled="true">Add an Artwork</a>
+          <a className="nav-link" href="/art_frontend/#/form" tabIndex="-1" aria-disabled="true">Add an Artwork</a>
         </li>
       </ul>
     </div>

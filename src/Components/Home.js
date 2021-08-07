@@ -12,16 +12,16 @@ function Home (){
         </div>
     </div>
     <div className="buttons">
-    <a className="btn btn-dark" href="/artworks" role="button">View Artworks</a>
+    <a className="btn btn-dark" href="/art_frontend/#/artworks" role="button">View Artworks</a>
     <br/>
     <br/>
-    <a className="btn btn-dark" href="/form" role="button">Add an Artwork</a>
+    <a className="btn btn-dark" href="/art_frontend/#/form" role="button">Add an Artwork</a>
     <br/>
     <br/>
-    <a className="btn btn-dark" href="/artists" role="button">View Artists</a>
+    <a className="btn btn-dark" href="/art_frontend/#/artists" role="button">View Artists</a>
     <br/>
     <br/>
-    <a className="btn btn-dark" href="/museums" role="button">View Museums</a>
+    <a className="btn btn-dark" href="/art_frontend/#/museums" role="button">View Museums</a>
     </div>
     <div className="home-caption">
         <p id="kusama-caption">Yayoi Kusama,"The Spirit of the Pumpkins Descended into the Heavens."</p>
