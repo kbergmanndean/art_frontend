@@ -1,6 +1,6 @@
 
 import './App.css';
-import {HashRouter as Router, Switch, Route} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Form from "./Components/Form";
 import Home from "./Components/Home";
 import Artworks from "./Components/Artworks";
@@ -45,16 +45,16 @@ function App() {
 
   return(
     <div className="App">
-      <Router basename="/art_frontend/#">
+      <Router basename="/art_frontend">
           <Switch>
-            <Route exact path="/art_frontend/#/form" component={()=><Form artworks={artworks} setArtworks={setArtworks} artists={artists} setArtists={setArtists} museums={museums} setMuseums={setMuseums}/>}/>
-            <Route exact path="/art_frontend/#/" component={()=><Home/>}/>
-            <Route exact path="/art_frontend/#/artists" component={()=><Artists artists={artists} setArtists={setArtists}/>}/>
-            <Route exact path="/art_frontend/#/museums" component={()=><Museums museums={museums} setMuseums={setMuseums}/>}/>
-            <Route exact path="/art_frontend/#/artworks" component={()=><Artworks artworks={artworks} setArtworks={setArtworks} artists={artists} museums={museums}/>}/>
-            {artworks.map(item=>{return <Route exact path={`/art_frontend/#/artworks/${item.id}`} component={()=><Piece  key={item.id} piece={item} setArtworks={setArtworks} artworks={artworks}/>}/>})}
-            {artists.map(item=>{return <Route exact path={`/art_frontend/#/artists/${item.id}`} component={()=><ArtistPiece artist={item} artists={artists} artworks={artworks}/>}/>})}
-            {museums.map(item=>{return <Route exact path={`/art_frontend/#/museums/${item.id}`} component={()=><MuseumPiece museum={item} museums={museums} artworks={artworks}/>}/>})}
+            <Route exact path="/form" component={()=><Form artworks={artworks} setArtworks={setArtworks} artists={artists} setArtists={setArtists} museums={museums} setMuseums={setMuseums}/>}/>
+            <Route exact path="/" component={()=><Home/>}/>
+            <Route exact path="/artists" component={()=><Artists artists={artists} setArtists={setArtists}/>}/>
+            <Route exact path="/museums" component={()=><Museums museums={museums} setMuseums={setMuseums}/>}/>
+            <Route exact path="/artworks" component={()=><Artworks artworks={artworks} setArtworks={setArtworks} artists={artists} museums={museums}/>}/>
+            {artworks.map(item=>{return <Route exact path={`/artworks/${item.id}`} component={()=><Piece  key={item.id} piece={item} setArtworks={setArtworks} artworks={artworks}/>}/>})}
+            {artists.map(item=>{return <Route exact path={`/artists/${item.id}`} component={()=><ArtistPiece artist={item} artists={artists} artworks={artworks}/>}/>})}
+            {museums.map(item=>{return <Route exact path={`/museums/${item.id}`} component={()=><MuseumPiece museum={item} museums={museums} artworks={artworks}/>}/>})}
           </Switch>
       </Router>
     </div>
